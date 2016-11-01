@@ -1,0 +1,26 @@
+(
+ :root-dir "/home/konalio/biometrics-image-processing-and-analysis"
+ :cache-dir "/home/konalio/biometrics-image-processing-and-analysis/.ensime_cache"
+ :scala-compiler-jars ("/home/konalio/.activator-1.3/repository/org.scala-lang/scala-compiler/2.11.7/jars/scala-compiler.jar" "/home/konalio/.activator-1.3/repository/org.scala-lang/scala-library/2.11.7/jars/scala-library.jar" "/home/konalio/.activator-1.3/repository/org.scala-lang/scala-reflect/2.11.7/jars/scala-reflect.jar" "/home/konalio/.ivy2/cache/org.scala-lang/scalap/jars/scalap-2.11.7.jar")
+ :name "biometrics-image-processing-and-analysis"
+ :java-home "/usr/lib/jvm/java-8-oracle"
+ :java-flags ("-Xss2m" "-Dactivator.home=/home/konalio/.activator-1.3" "-Xms1024m" "-Xmx1024m" "-XX:ReservedCodeCacheSize=128m" "-XX:MaxMetaspaceSize=256m")
+ :java-compiler-args nil
+ :reference-source-roots ("/usr/lib/jvm/java-8-oracle/src.zip")
+ :scala-version "2.11.7"
+ :compiler-args ("-feature" "-deprecation" "-Xlint" "-Yno-adapted-args" "-Ywarn-dead-code" "-Ywarn-numeric-widen" "-Xfuture" "-Ywarn-unused-import" "-Ymacro-expand:discard")
+ :disable-source-monitoring nil
+ :disable-class-monitoring nil
+ :source-mode nil
+ :subprojects ((
+   :name "biometrics-image-processing-and-analysis"
+   :source-roots ("/home/konalio/biometrics-image-processing-and-analysis/src/main/scala" "/home/konalio/biometrics-image-processing-and-analysis/src/test/scala")
+   :targets ("/home/konalio/biometrics-image-processing-and-analysis/target/scala-2.11/classes")
+   :test-targets ("/home/konalio/biometrics-image-processing-and-analysis/target/scala-2.11/test-classes")
+   :depends-on-modules nil
+   :compile-deps ("/home/konalio/.activator-1.3/repository/org.scala-lang/scala-library/2.11.7/jars/scala-library.jar" "/home/konalio/.ivy2/cache/org.scala-lang/scala-swing/jars/scala-swing-2.11.0-M7.jar")
+   :runtime-deps nil
+   :test-deps ("/home/konalio/.activator-1.3/repository/org.scala-lang/scala-reflect/2.11.2/jars/scala-reflect.jar" "/home/konalio/.activator-1.3/repository/org.scala-lang.modules/scala-xml_2.11/1.0.2/bundles/scala-xml_2.11.jar" "/home/konalio/.activator-1.3/repository/org.scalatest/scalatest_2.11/2.2.4/bundles/scalatest_2.11.jar")
+   :doc-jars ("/home/konalio/biometrics-image-processing-and-analysis/target/scala-2.11/hello-scala_2.11-1.0-javadoc.jar" "/home/konalio/.ivy2/cache/org.scala-lang/scala-library/docs/scala-library-2.11.7-javadoc.jar" "/home/konalio/.ivy2/cache/org.scala-lang/scala-reflect/docs/scala-reflect-2.11.2-javadoc.jar" "/home/konalio/.ivy2/cache/org.scala-lang/scala-swing/docs/scala-swing-2.11.0-M7-javadoc.jar" "/home/konalio/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/docs/scala-xml_2.11-1.0.2-javadoc.jar" "/home/konalio/.ivy2/cache/org.scalatest/scalatest_2.11/docs/scalatest_2.11-2.2.4-javadoc.jar")
+   :reference-source-roots ("/home/konalio/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.7-sources.jar" "/home/konalio/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.11.2-sources.jar" "/home/konalio/.ivy2/cache/org.scala-lang/scala-swing/srcs/scala-swing-2.11.0-M7-sources.jar" "/home/konalio/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/srcs/scala-xml_2.11-1.0.2-sources.jar" "/home/konalio/.ivy2/cache/org.scalatest/scalatest_2.11/srcs/scalatest_2.11-2.2.4-sources.jar")))
+)

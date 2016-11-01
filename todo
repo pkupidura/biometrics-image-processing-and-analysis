@@ -2,3 +2,15 @@ projekcja pionowa i pozioma
 edycja jasności
 kontrast
 progowanie
+inwersja
+szarość
+
+sprawko z tych rzeczy na 03.11.16 23:59
+
+rozciąganie histogramu
+wyrównanie histogramu
+filtry:
+uśredniający
+filtr gaussa
+filtr wyostrzający
+do krawędzi: krzyż robertsa, filtr sobola
