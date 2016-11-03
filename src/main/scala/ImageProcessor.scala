@@ -170,8 +170,39 @@ object ImageProcessor {
       )
     )(image)
 
+  def mean(image: BufferedImage) =
+    filter(
+      Map(
+        (-1, -1) -> 1,
+        (-1, 0) -> 1,
+        (-1, 1) -> 1,
+        (0, 1) -> 1,
+        (1, 1) -> 1,
+        (1, 0) -> 1,
+        (1, -1) -> 1,
+        (0, -1) -> 1,
+        (0, 0) -> 1
+      )
+    )(image)
+
+  def sharpen(image: BufferedImage) =
+    filter(
+      Map(
+        (-1, -1) -> 0,
+        (-1, 0) -> -2,
+        (-1, 1) -> 0,
+        (0, 1) -> -2,
+        (1, 1) -> 0,
+        (1, 0) -> -2,
+        (1, -1) -> 0,
+        (0, -1) -> -2,
+        (0, 0) -> 11
+      )
+    )(image)
+
   def filter(kernel: Map[(Int, Int), Int])(image: BufferedImage) = {
     val filtered = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_RGB)
+    val weightsSum = kernel.values.sum
 
     image.pixels foreach {
       case (x, y) =>
@@ -181,7 +212,7 @@ object ImageProcessor {
               image.intensity(pos._1 + x, pos._2 + y) map (_ * weight)
           }
 
-        val newI = weighted.sum / weighted.size
+        val newI = weighted.sum / weightsSum
 
         filtered.setIntensity(x, y, newI)
     }

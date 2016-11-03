@@ -28,6 +28,12 @@ class ImagePanel extends Panel
   def gauss() =
     bufferedImage = ImageProcessor.gauss(bufferedImage)
 
+  def sharpen() =
+    bufferedImage = ImageProcessor.sharpen(bufferedImage)
+
+  def mean() =
+    bufferedImage = ImageProcessor.mean(bufferedImage)
+
   def spread() =
     ImageProcessor.spread(bufferedImage)
 

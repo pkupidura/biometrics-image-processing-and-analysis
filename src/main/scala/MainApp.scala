@@ -111,12 +111,26 @@ object MainApp extends SimpleSwingApplication {
       enabled = true
     }
 
+    val meanButton = new Button {
+      text = "Mean"
+      foreground = Color.blue
+      enabled = true
+    }
+
+    val sharpenButton = new Button {
+      text = "Sharpen"
+      foreground = Color.blue
+      enabled = true
+    }
+
     val buttonGrid = new GridPanel(6, 1) {
       contents += greyButton
       contents += reloadButton
       contents += widthenHistButton
       contents += evenHistButton
       contents += gaussButton
+      contents += sharpenButton
+      contents += meanButton
       resizable = true
       maximumSize = new Dimension(100, 1000)
     }
@@ -148,9 +162,12 @@ object MainApp extends SimpleSwingApplication {
     listenTo(brightenButton)
     listenTo(verticalProjectionButton)
     listenTo(horizontalProjectionButton)
+
     listenTo(widthenHistButton)
     listenTo(evenHistButton)
     listenTo(gaussButton)
+    listenTo(meanButton)
+    listenTo(sharpenButton)
 
     reactions += {
       case ButtonClicked(comp) if comp == greyButton =>
@@ -187,6 +204,14 @@ object MainApp extends SimpleSwingApplication {
 
       case ButtonClicked(comp) if comp == gaussButton =>
         imagePanel.gauss()
+        imagePanel.repaint()
+
+      case ButtonClicked(comp) if comp == meanButton =>
+        imagePanel.mean()
+        imagePanel.repaint()
+
+      case ButtonClicked(comp) if comp == sharpenButton =>
+        imagePanel.sharpen()
         imagePanel.repaint()
 
     }
